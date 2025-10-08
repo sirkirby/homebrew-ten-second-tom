@@ -1,15 +1,15 @@
 class TenSecondTom < Formula
   desc "CLI tool for daily work summaries using Claude AI"
   homepage "https://github.com/sirkirby/ten-second-tom"
-  url "https://github.com/sirkirby/ten-second-tom/archive/refs/tags/v0.1.0-beta.7.tar.gz"
+  url "https://github.com/sirkirby/ten-second-tom/archive/refs/tags/v0.1.0-beta.10.tar.gz"
   sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
   license "MIT"
 
   # Bottles (pre-built binaries) for fast installation
   bottle do
-    root_url "https://github.com/sirkirby/ten-second-tom/releases/download/v0.1.0-beta.7"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "e53131aca88ec0dd38c3a9d90feb34d9c70e4b6fab00ec4ecc3860f44218eb79"
-    sha256 cellar: :any_skip_relocation, sequoia:       "d3feb6b7337663f93846476eecd9fdb53f91fc29281a9a737c9d84926955ff90"
+    root_url "https://github.com/sirkirby/ten-second-tom/releases/download/v0.1.0-beta.10"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "0d4e57d806fdb136f6ebe69df0cbe9df29f58f1354cfe60a75bb0fec375d65c7"
+    sha256 cellar: :any_skip_relocation, sequoia:       "94490c495eca190859cc9486fcd994c2626e41d03f3ce9cf93b79f0af7973b19"
   end
 
   def install
