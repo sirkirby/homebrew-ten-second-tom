@@ -1,5 +1,5 @@
 class TenSecondTom < Formula
-  desc "CLI tool for daily work summaries using Claude AI"
+  desc "CLI tool for daily work summaries using AI"
   homepage "https://github.com/sirkirby/ten-second-tom"
   url "https://github.com/sirkirby/ten-second-tom/archive/refs/tags/v0.1.0-beta.10.tar.gz"
   sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"

@@ -1,4 +1,6 @@
-# Sirkirby Ten-second-tom
+# Ten Second Tom
+
+An AI assisted daily and weekly summary tool for storing summarized and curated memories. You authenticate using your SSH key and all stored memories are signed using that key.
 
 ## How do I install these formulae?
 
