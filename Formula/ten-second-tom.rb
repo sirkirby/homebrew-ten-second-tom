@@ -1,15 +1,15 @@
 class TenSecondTom < Formula
   desc "CLI tool for daily work summaries using Claude AI with voice entry support"
   homepage "https://github.com/sirkirby/ten-second-tom"
-  url "https://github.com/sirkirby/ten-second-tom/archive/refs/tags/v0.4.1.tar.gz"
-  sha256 "02e66de9aa1df2fe09d53747b71711b54a88c83dc57f8c041cf0c3aa1b310fd2"
+  url "https://github.com/sirkirby/ten-second-tom/archive/refs/tags/v0.4.2.tar.gz"
+  sha256 "10c6a14bdf35fe0184102354cf463453493d9e786662af33f2df8255753282c7"
   license "MIT"
 
   # Bottles (pre-built binaries) for fast installation
   bottle do
-    root_url "https://github.com/sirkirby/ten-second-tom/releases/download/v0.4.1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "337029bb52df7be2f811599f0ec6060e808c92ca92790b74d3e27b023092234c"
-    sha256 cellar: :any_skip_relocation, sequoia:       "abd5ff7a3f1304449e63088c1c3d67c635c1c405bbb0edd08b2d567549b8318a"
+    root_url "https://github.com/sirkirby/ten-second-tom/releases/download/v0.4.2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "9b3043b3d87eeebc26d1b0dc75e412b004ce7596e5b7a8b391551baac73c5f86"
+    sha256 cellar: :any_skip_relocation, sequoia:       "a0f054374e8e8d819e8e9405a0a5469478c0a65e0233270e2e69a23ec2baadc6"
   end
 
   # Dependencies for voice entry feature
