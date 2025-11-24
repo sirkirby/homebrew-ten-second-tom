@@ -1,15 +1,15 @@
 class TenSecondTom < Formula
   desc "CLI tool for daily work summaries using Claude AI with voice entry support"
   homepage "https://github.com/sirkirby/ten-second-tom"
-  url "https://github.com/sirkirby/ten-second-tom/archive/refs/tags/v0.8.6.tar.gz"
-  sha256 "f8b85281eb1dc96148667a33aaf115b2589e4678b4a90a44efeeb44731388ddd"
+  url "https://github.com/sirkirby/ten-second-tom/archive/refs/tags/v0.8.7.tar.gz"
+  sha256 "cbb6c820cf8443f69325731b66a51c4eb22cb7cfd0c140f217de1b086e4a9ffa"
   license "MIT"
 
   # Bottles (pre-built binaries) for fast installation
   bottle do
-    root_url "https://github.com/sirkirby/ten-second-tom/releases/download/v0.8.6"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "dfe86dcabf95fb5748260af6739d3c2acf5a2e201ee57e81e43d5528b34afccf"
-    sha256 cellar: :any_skip_relocation, sequoia:       "bbbc752bae597710b688d8f653520c5967304a0e1c0e59dc64081b2add1eb21e"
+    root_url "https://github.com/sirkirby/ten-second-tom/releases/download/v0.8.7"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "ddd46f4231bb70a7b50b840577b37156d43e0826040f1bc60e6ee3e36ccd782b"
+    sha256 cellar: :any_skip_relocation, sequoia:       "4acd22b05bd265cf773cf7a89a9a7af927623bca19108df6cad2da7c01367bda"
   end
 
   # Dependencies for voice entry feature
@@ -17,6 +17,11 @@ class TenSecondTom < Formula
 
   def install
     bin.install "tom"
+
+    # Install native macOS extension for notifications
+    if OS.mac?
+      prefix.install "TenSecondTom.Extensions.MacOS.app"
+    end
   end
 
   def caveats
