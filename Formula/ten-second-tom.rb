@@ -1,14 +1,14 @@
 class TenSecondTom < Formula
   desc "CLI tool for daily work summaries using Claude AI with voice entry support"
   homepage "https://github.com/sirkirby/ten-second-tom"
-  url "https://github.com/sirkirby/ten-second-tom/archive/refs/tags/v0.9.1.tar.gz"
-  sha256 "eb408af13358809c83c368ce2262301d78a7da0409aa5c1889eb1951ee2f6830"
+  url "https://github.com/sirkirby/ten-second-tom/archive/refs/tags/v0.9.2.tar.gz"
+  sha256 "3e15475ffed77ec64ee296d8223e4dac4e878ab8462d20fe40991e318811eb48"
   license "MIT"
 
   # Bottle (pre-built binary) for Apple Silicon
   bottle do
-    root_url "https://github.com/sirkirby/ten-second-tom/releases/download/v0.9.1"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "2f220b377b362de4611aa0eb2527c500b157220386cc3a5af18c95a40b165ae9"
+    root_url "https://github.com/sirkirby/ten-second-tom/releases/download/v0.9.2"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "52159502d337c2a8e3105da7798053f10e48163a465ebb0c6cb91001488270b3"
   end
 
   # Dependencies for voice entry feature
@@ -18,6 +18,8 @@ class TenSecondTom < Formula
     bin.install "tom"
     # Install native macOS extension for notifications
     prefix.install "TenSecondTom.Extensions.MacOS.app" if OS.mac?
+    # Ensure notifier binary is executable
+    chmod 0755, prefix/"TenSecondTom.Extensions.MacOS.app/Contents/MacOS/notifier" if OS.mac?
   end
 
   def caveats
